@@ -4,3 +4,12 @@
         margin-right: 15px;
     }
 }
+
+@media (max-width: 767.98px) {
+    #servicos a.destaque .img-container {
+        height: 120px;
+    }
+    #servicos a.destaque .img-container img{
+        max-height: 120px;
+    }
+}
