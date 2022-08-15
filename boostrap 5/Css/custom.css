@@ -185,5 +185,5 @@
 }
 
 #servicos .button-group button.active {
-  
+  color: var(--primary);
 }

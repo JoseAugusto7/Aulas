@@ -8,4 +8,12 @@ jQuery(document).ready(function($){
             $("#header").removeClass("active");
         }
     };
+
+    //ISOTOPE
+    let btns = $("#servicos button-group button");
+
+    btns.click(function (e) {
+        $("#servicos .button-group button").removeClass("active"); 
+        e.target.classList.add("active");
+    });
 });
