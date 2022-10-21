@@ -15,9 +15,8 @@ a:hover {
 }
 
 .logo {
-    font-size: 24px;
-    text-transform: uppercase;
     letter-spacing: 4px;
+    margin-top: 35px;
 }
 
 nav {
@@ -25,7 +24,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     background: #5e2088;
-    height: 15vh;
+    height: 20vh;
 }
 
 .nav-list {
@@ -49,7 +48,7 @@ nav {
     margin: 8px;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 992px) {
     
     body {
         overflow-x: hidden;
