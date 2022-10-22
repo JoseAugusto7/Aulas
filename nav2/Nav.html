@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<title>Miau Auau</title>
+</head>
+
+<style>
+	.visible-m {
+		display: none !important;
+	}
+
+	.hidden-m {
+		display: block !important;
+	}
+
+	nav {
+		height: 180px;
+		width: 100vw;
+		z-index: 99;
+		background-color: #5e2088;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	nav .container {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		height: 100%;
+		justify-content: space-between;
+	}
+
+	nav {
+		color: white;
+	}
+
+	nav a {
+		text-decoration: none;
+		color: white;
+        padding-right: 5px;
+	}
+	
+	nav ul,
+	nav ul li {
+		list-style: none;
+		margin: 0;
+		padding-right: 5px;
+	}
+
+	nav ul {
+		display: flex;
+		gap: 10px;
+        font-size: 20px;
+	}
+
+    nav a:hover {
+        transition: 0.4s;
+        color: rgb(255, 225, 0);
+    }
+
+	@media (max-width: 992px) {
+
+        nav {
+            height: 150px;
+        }
+
+		nav.mobile .logo img {
+			width: 215px;
+            display: block;
+		}
+
+		nav.mobile .hamburguer {
+			padding: 1rem 0;
+			height: 12px;
+			width: 30px;
+			box-sizing: content-box;
+			cursor: pointer;
+			position: relative;
+		}
+
+		nav.mobile .hamburguer .bar {
+			background-color: #ffffff;
+			height: 2px;
+			width: 100%;
+			border-radius: 3px;
+			position: absolute;
+		}
+
+		nav.mobile .hamburguer .bar:first-child {
+			top: .5rem;
+			transition: top .2s .15s, transform .3s;
+		}
+
+		nav.mobile .hamburguer .bar:nth-child(2) {
+			top: 1.3rem;
+			transition: top .2s .15s, transform .3s;
+		}
+
+		nav.mobile .hamburguer .bar:last-child {
+			bottom: .5rem;
+			transition: bottom .2s .15s, transform .3s;
+		}
+
+		nav.mobile.open .hamburguer .bar:first-child {
+			top: 50%;
+			transform: translateY(-50%) rotate(-45deg);
+			transition: top .2s, transform .3s .1s;
+		}
+
+		nav.mobile.open .hamburguer .bar:nth-child(2) {
+			transform: rotate(45deg);
+			transition: transform .3s .1s;
+		}
+
+		nav.mobile.open .hamburguer .bar:last-child {
+			bottom: 50%;
+			transform: translateY(50%) rotate(45deg);
+			transition: bottom .2s, transform .3s .1s;
+		}
+
+		nav.mobile .dropdown-mobile {
+			background: #5e2088;
+			z-index: 99;
+			position: fixed;
+			width: 100%;
+			height: 50%;
+			overflow: overlay;
+			margin-left: 100vw;
+			transition: .3s;
+		}
+		
+		nav.mobile.open .dropdown-mobile {
+			margin-left: 0;
+		}
+
+		nav.mobile .dropdown-mobile ul {
+			list-style: none;
+			display: inline-block;
+			width: 100%;
+			padding: 0;
+		}
+
+		nav.mobile .dropdown-mobile ul li {
+			width: 100;
+		}
+
+		nav.mobile .dropdown-mobile ul li a {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			color: #ffffff;
+			padding: 1rem 1.5rem;
+		}
+
+		nav.mobile .dropdown-mobile i {
+			font-size: 1.6rem;
+		}
+
+		nav.mobile .dropdown-mobile .t-link {
+			font-size: 1.5rem;
+			line-height: 100%;
+			margin-left: 1rem;
+			font-family: "Gilroy", sans-serif;
+		}
+
+		nav.mobile .logo {
+			color: #ffffff;
+			font-size: 2rem;
+		}
+
+		.visible-m {
+			display: block !important;
+		}
+
+		.hidden-m {
+			display: none !important;
+		}
+	}
+
+</style>
+
+<body>
+	<nav class="hidden-m ">
+		<div class="container">
+			<a class="logo navbar-brand" href="#">
+				<img src="logo_MiauAuau-01.webp">
+			</a>
+			<ul>
+				<li>
+					<a href="#inicio">Início</a>
+				</li>
+				<li>
+					<a href="#quem_somos">Quem somos</a>
+				</li>
+				<li>
+					<a href="#galeria">Galeria</a>
+				</li>
+				<li>
+					<a href="#campanha">Campanha de castração solidária</a>
+				</li>
+				<li>
+					<a href="#doe">Doe!</a>
+				</li>
+                <li>
+					<a href="#adote">Adote!</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<nav class="visible-m mobile">
+		<div class="container">
+			<a class="logo navbar-brand" href="#">
+				<img src="logo_MiauAuau-01.webp">
+			</a>
+			<div class="hamburguer">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+		</div>
+		<div class="dropdown-mobile accordion" id="sidebar-accordion">
+			<ul>
+				<li>
+					<a href="#inicio">Início</a>
+				</li>
+				<li>
+					<a href="#quem_somos">Quem somos</a>
+				</li>
+				<li>
+					<a href="#doe">Doe!</a>
+				</li>
+				<li>
+					<a href="#campanha">Campanha de castração solidária</a>
+				</li>
+				<li>
+					<a href="#galeria">Galeria</a>
+				</li>
+                <li>
+					<a href="#adote">Adote!</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+</body>
+
+<script>
+	$('.hamburguer').on('click', function() {
+		$('nav.mobile').toggleClass('open');
+	});
+</script>
+
+</html>
