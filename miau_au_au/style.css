@@ -1,93 +1,175 @@
-* {
-    margin: 0;
-    padding: 0
-}
+	.visible-m {
+		display: none !important;
+	}
 
-a {
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-}
+	.hidden-m {
+		display: block !important;
+	}
 
-a:hover {
-    color: rgb(255, 225, 0);
-    opacity: 0.7;
-}
+	nav {
+		height: 180px;
+		width: 100vw;
+		z-index: 99;
+		background-color: #5e2088;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
 
-.logo {
-    letter-spacing: 4px;
-    margin-top: 35px;
-}
+	nav .container {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		height: 100%;
+		justify-content: space-between;
+	}
 
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #5e2088;
-    height: 20vh;
-}
+	nav {
+		color: white;
+	}
 
-.nav-list {
-    list-style: none;
-    display: flex;
-}
+	nav a {
+		text-decoration: none;
+		color: white;
+        padding-right: 5px;
+	}
+	
+	nav ul,
+	nav ul li {
+		list-style: none;
+		margin: 0;
+		padding-right: 5px;
+	}
 
-.nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
-}
+	nav ul {
+		display: flex;
+		gap: 10px;
+        font-size: 20px;
+	}
 
-.mobile-menu {
-    cursor: pointer;
-}
-
-.mobile-menu div {
-    width: 32px;
-    height: 2px;
-    background: #fff;
-    margin: 8px;
-}
-
-@media (max-width: 992px) {
-    
-    body {
-        overflow-x: hidden;
-    }
-    
-    .nav-list {
-        position: absolute;
-        top: 8vh;
-        right: 0;
-        width: 50vw;
-        height: 92vh;
-        background: #23232e;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
+    nav a:hover {
+        transition: 0.4s;
+        color: rgb(255, 225, 0);
     }
 
-    .nav-list li {
-        margin-left: 0;
+    .inicio {
+        padding-top: 20vw;
     }
 
-    .mobile-menu {
-        display: block;
-    }
-}
+	@media (max-width: 992px) {
 
-.nav-list.active {
-    transform: translateX(0);
-}
+        nav {
+            height: 150px;
+        }
 
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+		nav.mobile .logo img {
+			width: 215px;
+		}
+
+		nav.mobile .hamburguer {
+			padding: 1rem 0;
+			height: 12px;
+			width: 30px;
+			box-sizing: content-box;
+			cursor: pointer;
+			position: relative;
+		}
+
+		nav.mobile .hamburguer .bar {
+			background-color: #ffffff;
+			height: 2px;
+			width: 100%;
+			border-radius: 3px;
+			position: absolute;
+		}
+
+		nav.mobile .hamburguer .bar:first-child {
+			top: .5rem;
+			transition: top .2s .15s, transform .3s;
+		}
+
+		nav.mobile .hamburguer .bar:nth-child(2) {
+			top: 1.3rem;
+			transition: top .2s .15s, transform .3s;
+		}
+
+		nav.mobile .hamburguer .bar:last-child {
+			bottom: .5rem;
+			transition: bottom .2s .15s, transform .3s;
+		}
+
+		nav.mobile.open .hamburguer .bar:first-child {
+			top: 50%;
+			transform: translateY(-50%) rotate(-45deg);
+			transition: top .2s, transform .3s .1s;
+		}
+
+		nav.mobile.open .hamburguer .bar:nth-child(2) {
+			transform: rotate(45deg);
+			transition: transform .3s .1s;
+		}
+
+		nav.mobile.open .hamburguer .bar:last-child {
+			bottom: 50%;
+			transform: translateY(50%) rotate(45deg);
+			transition: bottom .2s, transform .3s .1s;
+		}
+
+		nav.mobile .dropdown-mobile {
+			background: #5e2088;
+			z-index: 99;
+			position: fixed;
+			width: 100%;
+			height: 50%;
+			overflow: overlay;
+			margin-left: 100vw;
+			transition: .3s;
+		}
+		
+		nav.mobile.open .dropdown-mobile {
+			margin-left: 0;
+		}
+
+		nav.mobile .dropdown-mobile ul {
+			list-style: none;
+			display: inline-block;
+			width: 100%;
+			padding: 0;
+		}
+
+		nav.mobile .dropdown-mobile ul li {
+			width: 100;
+		}
+
+		nav.mobile .dropdown-mobile ul li a {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			color: #ffffff;
+			padding: 1rem 1.5rem;
+		}
+
+		nav.mobile .dropdown-mobile i {
+			font-size: 1.6rem;
+		}
+
+		nav.mobile .dropdown-mobile .t-link {
+			font-size: 1.5rem;
+			line-height: 100%;
+			margin-left: 1rem;
+			font-family: "Gilroy", sans-serif;
+		}
+
+		nav.mobile .logo {
+			color: #ffffff;
+			font-size: 2rem;
+		}
+
+		.visible-m {
+			display: block !important;
+		}
+
+		.hidden-m {
+			display: none !important;
+		}
+	}

@@ -1,32 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-Br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
-
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+ 
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <title>Miau auau</title>
+	<title>Miau Auau</title>
 </head>
 <body>
-    
-    <header>
-        <nav>
-            <a class="logo">
-            <img src="logo_MiauAuau-01.webp">
-            </a>
-                <ul class="nav-list">
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Galeria</a></li>
-                    <li><a href="#">Campanha de castraçâo solidária</a></li>
-                    <li><a href="#">Doe!</a></li>
-                    <li><a href="#">Adote!</a></li>
-                </ul>
-        </nav>
-    </header>
+	<nav class="hidden-m ">
+		<div class="container">
+			<a class="logo navbar-brand" href="#">
+				<img src="logo_MiauAuau-01.webp" alt="logo">
+			</a>
+			<ul>
+				<li>
+					<a href="#inicio">Início</a>
+				</li>
+				<li>
+					<a href="#quem_somos">Quem somos</a>
+				</li>
+				<li>
+					<a href="#galeria">Galeria</a>
+				</li>
+				<li>
+					<a href="#campanha">Campanha de castração solidária</a>
+				</li>
+				<li>
+					<a href="#doe">Doe!</a>
+				</li>
+                <li>
+					<a href="#adote">Adote!</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<nav class="visible-m mobile">
+		<div class="container">
+			<a class="logo navbar-brand" href="#">
+				<img src="logo_MiauAuau-01.webp" alt="logo">
+			</a>
+			<div class="hamburguer">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+		</div>
+		<div class="dropdown-mobile accordion" id="sidebar-accordion">
+			<ul>
+				<li>
+					<a href="#inicio">Início</a>
+				</li>
+				<li>
+					<a href="#quem_somos">Quem somos</a>
+				</li>
+				<li>
+					<a href="#doe">Doe!</a>
+				</li>
+				<li>
+					<a href="#campanha">Campanha de castração solidária</a>
+				</li>
+				<li>
+					<a href="#galeria">Galeria</a>
+				</li>
+                <li>
+					<a href="#adote">Adote!</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+    <div class="inicio">
+        <h1>Adotar: Um ato de amor!</h1>
+        <button href="#">Doe Agora!</button>
+    </div>
 
 </body>
+
+<script>
+	$('.hamburguer').on('click', function() {
+		$('nav.mobile').toggleClass('open');
+	});
+</script>
 </html>
