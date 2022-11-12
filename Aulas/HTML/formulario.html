@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulário Dev</title>
+</head>
+<body>
+    <header>
+        <!--Título e Subtítulo-->
+        <div>
+            <h1>Cadastro de DEVs</h1>
+            <p>Complete com suas informações</p>
+            <br>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <fieldset> <!--Agrupador de campos-->
+                <div>
+                    <label>Nome</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+
+                <div>
+                    <label>Sobrenome</label>
+                    <input type="text" name="sobrenome" id="sobrenome">
+                </div>
+            </fieldset>
+
+            <div>
+                <label>Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <!--Radio button-->
+            <div>
+                <label>De qual lado da aplicação você desenvolve?</label>
+                <label>
+                    <input type="radio" name="devweb" value="frontend" checked>Frontend
+                </label>
+                <label>
+                    <input type="radio" name="devweb" value="backend">Backend
+                </label>
+                <label>
+                    <input type="radio" name="devweb" value="fullstack">Fullstack
+                </label>
+            </div>
+
+            <div>
+                <label>Senioridade</label>
+                <select id="senioridade">
+                    <option selected disabled value="">Selecione</option> <!--Opção inicial sem valor para chamar a atenção.-->
+                    <option>Junior</option> <!--Selected para aparecer ao carregar a página como a opção; Disable para não estar ativado; Sem valor para ser apenas algo para chamar a atenção-->
+                    <option>Pleno</option>
+                    <option>Senior</option>
+                </select>
+            </div>
+
+            <fieldset>
+                <label>Selecione a(s) tecnologia(s) que utiliza:</label><br><br>
+                <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+                <label for="tecnologia1">HTML</label>
+                <input type="checkbox" id="tecnologia2" name="tecnologia1" value="CSS">
+                <label for="tecnologia2">CSS</label>
+                <input type="checkbox" id="tecnologia3" name="tecnologia1" value="JavaScript">
+                <label for="tecnologia3">JavaScript</label>
+                <input type="checkbox" id="tecnologia4" name="tecnologia1" value="PHP">
+                <label for="tecnologia4">PHP</label>
+                <input type="checkbox" id="tecnologia5" name="tecnologia1" value="C#">
+                <label for="tecnologia5">C#</label>
+                <input type="checkbox" id="tecnologia6" name="tecnologia1" value="Phyton">
+                <label for="tecnologia6">Phyton</label>
+                <input type="checkbox" id="tecnologia7" name="tecnologia1" value="Java">
+                <label for="tecnologia7">Java</label>
+            </fieldset>
+
+            <div>
+                <br>
+                <label>Conte sobre suas experiências:</label>
+                <textarea row="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+            </div>
+
+            <button type="submit">Concluído</button>
+        </form>
+    </main>
+</body>
+</html>
