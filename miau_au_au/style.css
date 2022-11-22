@@ -61,7 +61,10 @@
     }
 
 	.button-inicio {
-		margin-top: 20vw;
+		margin-top: 10vw;
+		background: transparent;
+		border-radius: 50px;
+		box-shadow:rgb(255, 225, 0);
 	}
 
 	@media (max-width: 992px) {
